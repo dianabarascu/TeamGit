@@ -13,5 +13,7 @@ public class Application {
         list.add(node2);
         list.add(node3);
 
+        System.out.println(list.print());
+
     }
 }

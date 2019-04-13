@@ -25,6 +25,20 @@ public class LinkedList {
     }
     // Displays all elements values of the list separated by space
     String print(){
-        return "";
+//        String elemente = "";
+        StringBuilder builder = new StringBuilder();
+        for(Node nodCurent = head ; nodCurent != null;
+        nodCurent = nodCurent.getNextElement()){
+            builder.append(nodCurent.getValue());
+            builder.append(" ");
+
+        }
+        return builder.toString();
+//        Node parcurge = head;
+//        while(parcurge.getNextElement()!= null){
+//            System.out.println(parcurge.getValue());
+//        }
+
+//        return elemente;
     }
 }
