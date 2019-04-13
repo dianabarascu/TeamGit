@@ -8,5 +8,10 @@ public class Application {
         Node node2 = new Node(40);
         Node node3 = new Node(50);
 
+        LinkedList list = new LinkedList();
+        list.add(node1);
+        list.add(node2);
+        list.add(node3);
+
     }
 }

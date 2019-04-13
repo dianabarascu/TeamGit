@@ -9,6 +9,15 @@ public class Node {
         this.value = value;
 
     }
+    public int getValue() {
+        return value;
+    }
 
+    public Node getNextElement() {
+        return nextElement;
+    }
 
+    public void setNextElement(Node nextElement) {
+        this.nextElement = nextElement;
+    }
 }
