@@ -19,7 +19,7 @@ public class BinarySearchTree {
 
         while (true) {
             // Add second value
-            if (currentNode.getKey() > key) {
+            if (currentNode.getKey() < key) {
                 if(currentNode.getRight() != null){
                     currentNode = currentNode.getRight();
                     continue;
@@ -53,13 +53,15 @@ public class BinarySearchTree {
 
     public void print (){
         print(root);
+        System.out.println();
     }
 
      private void print(TreeNode node){
-        if(node != null);
-        print(node.getLeft());
-        System.out.println(node.getKey() + "");
-        print(node.getRight());
+        if(node != null) {
+            print(node.getLeft());
+            System.out.println(node.getKey() + "");
+            print(node.getRight());
+        }
     }
     void remove(int key){
 
