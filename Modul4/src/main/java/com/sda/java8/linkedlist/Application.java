@@ -17,7 +17,7 @@ public class Application {
         System.out.println(list.print());
       //  System.out.println(list.reversePrint());
 
-        list.remove(20);
+        list.remove(40);
         System.out.println(list.print());
         System.out.println(list.reversePrint());
 

@@ -44,6 +44,7 @@ public class DoubleLinkedList {
         //if the first element is the value to remove, move the head to the next element
         if (head.getValue() == val){
             head = head.getNextElement();
+            head.setPreviousElement(null);
             return;
         }
         // Walk the list until we pass through all elements or we find the value
@@ -59,6 +60,7 @@ public class DoubleLinkedList {
         }
         //remove the element
         nodeCurent.setNextElement(nodeCurent.getNextElement().getNextElement());
+        nodeCurent.getNextElement().getNextElement().setPreviousElement(nodeCurent);
     }
 
     // Displays all elements values of the list separated by space
