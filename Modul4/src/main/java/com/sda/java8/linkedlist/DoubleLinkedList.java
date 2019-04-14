@@ -73,4 +73,14 @@ public class DoubleLinkedList {
         return builder.toString();
 
     }
+    String reversePrint() {
+
+        StringBuilder builder = new StringBuilder();
+        for (DoubleLinkedNode nodCurent = tail; nodCurent != null; nodCurent = nodCurent.getPreviousElement()) {
+            builder.append(nodCurent.getValue());
+            builder.append(" ");
+
+        }
+        return builder.toString();
+    }
 }
