@@ -15,7 +15,12 @@ public class Application {
         list.add(node3);
         list.add(node4);
         System.out.println(list.print());
+      //  System.out.println(list.reversePrint());
+
+        list.remove(20);
+        System.out.println(list.print());
         System.out.println(list.reversePrint());
+
     }
 
     private static void singleLinkedList() {
