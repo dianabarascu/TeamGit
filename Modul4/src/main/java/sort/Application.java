@@ -8,14 +8,17 @@ public class Application {
 
         int[] myArray = {2, 4, 3};
         int[] myArray2 = {6, 5, 3, 1, 8, 7, 2, 4};
-        Sort.bubbleSort(myArray);
-        Sort.bubbleSort(myArray2);
-        printArray(myArray);
+
+        Sort.mergeSort(myArray2);
         printArray(myArray2);
 
-        int[] myArray3 = generateRandomArray(getCitit());
-        Sort.bubbleSort(myArray3);
-        printArray(myArray3);
+//        Sort.bubbleSort(myArray);
+//        Sort.bubbleSort(myArray2);
+//        printArray(myArray);
+//        printArray(myArray2);
+//        int[] myArray3 = generateRandomArray(getCitit());
+//        Sort.bubbleSort(myArray3);
+//        printArray(myArray3);
 
     }
 
