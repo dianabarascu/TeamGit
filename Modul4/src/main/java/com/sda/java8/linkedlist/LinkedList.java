@@ -20,6 +20,37 @@ public class LinkedList {
 
     }
 
+    public void addInOrder(int data){
+
+        Node node = new Node(data);
+
+        if (head == null) {
+            head = node;
+            return;
+        } else if (node.getValue() < head.getValue()) {
+            node.nextElement = head;
+            head = node;
+            return;
+        }
+        Node p = head;
+
+        boolean added=false;
+        while (p.getNextElement() != null)
+        {
+            if (p.getNextElement().getValue() > data)
+            {
+                node.nextElement = p.nextElement;
+                p.nextElement = node;
+                added = true;
+                break;
+            }
+            p = p.nextElement;
+        }
+        if (!added)
+            p.nextElement = node;
+
+    }
+
     void remove (int val) {
 //        // Example remove last element if last contains only 2 values
 //        if(head.getNextElement().getNextElement() == null){

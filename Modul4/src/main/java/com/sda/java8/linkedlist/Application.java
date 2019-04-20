@@ -4,7 +4,13 @@ public class Application {
 
     public static void main (String[] args){
 
-//        singleLinkedList();
+      singleLinkedList();
+//        doubleLinkedList();
+
+
+    }
+
+    private static void doubleLinkedList() {
         DoubleLinkedNode node1 = new DoubleLinkedNode(20);
         DoubleLinkedNode node2 = new DoubleLinkedNode(40);
         DoubleLinkedNode node3 = new DoubleLinkedNode(30);
@@ -15,12 +21,14 @@ public class Application {
         list.add(node3);
         list.add(node4);
         System.out.println(list.print());
-      //  System.out.println(list.reversePrint());
+        //  System.out.println(list.reversePrint());
 
         list.remove(40);
         System.out.println(list.print());
         System.out.println(list.reversePrint());
-
+        list.remove(50);
+        System.out.println(list.print());
+        System.out.println(list.reversePrint());
     }
 
     private static void singleLinkedList() {
@@ -31,20 +39,21 @@ public class Application {
 
         LinkedList list = new LinkedList();
 
-        list.add(node1);
-        list.add(node2);
-        list.add(node3);
-        list.add(node4);
+        list.addInOrder(100);
+        list.addInOrder(300);
+        list.addInOrder(200);
+        list.addInOrder(150);
 
         System.out.println(list.print());
 
-        list.remove(40);
-        System.out.println(list.print());
-        list.remove(20);
-        System.out.println(list.print());
-        list.remove(50);
-        System.out.println(list.print());
-        list.remove(30);
-        System.out.println(list.print() +  "Ultimul");
+
+//        list.remove(40);
+//        System.out.println(list.print());
+//        list.remove(20);
+//        System.out.println(list.print());
+//        list.remove(50);
+//        System.out.println(list.print());
+//        list.remove(30);
+//        System.out.println(list.print() +  "Ultimul");
     }
 }
