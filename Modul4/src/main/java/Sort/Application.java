@@ -1,23 +1,31 @@
 package Sort;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class Application {
 
     public static void main(String[] args) {
+
+        int[]myArray = {2, 4, 3};
+        int[]myArray2 = {6, 5, 3, 1, 8, 7, 2, 4};
+
+//        Sort.mergeSort(myArray);
+        Sort.mergeSort(myArray2);
+
+//        printArray(myArray);
+        printArray(myArray2);
+
+//bubblesort
 //      Generate n numbers, print, sort, print
         //read n from console
         //call generateMethod
         //call print
         //call sort
         //call prin
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduce-ti numarul de elemente: ");
-        int n = scanner.nextInt();
-        int[]myArray3 = generate(n);
-        Sort.bubbleSort(myArray3);
-        printArray(myArray3);
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Introduce-ti numarul de elemente: ");
+//        int n = scanner.nextInt();
+//        int[]myArray3 = generate(n);
+//        Sort.bubbleSort(myArray3);
+//        printArray(myArray3);
 
 //        int[]myArray = {2, 4, 3};
 //        int[]myArray2 = {6, 5, 3, 1, 8, 7, 2, 4};
@@ -57,5 +65,5 @@ public class Application {
             //for each element - random().
         }
         return array;
-    }
+   }
 }
