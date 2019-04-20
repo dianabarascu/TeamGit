@@ -1,12 +1,11 @@
 package BinarySearchTree;
 
-import sun.reflect.generics.tree.Tree;
 
 public class BinarySearchTree {
 
     private TreeNode root;
 
-    void add(int key){
+    public void add(int key){
 
         TreeNode newNode = new TreeNode(key);
 
@@ -56,14 +55,14 @@ public class BinarySearchTree {
         System.out.println();
     }
 
-     private void print(TreeNode node){
+     public void print(TreeNode node){
         if(node != null) {
             print(node.getLeft());
             System.out.println(node.getKey() + "");
             print(node.getRight());
         }
     }
-    void remove(int key){
+    public void remove(int key){
 
     }
 }
