@@ -70,11 +70,7 @@ public class Sort {
                     }
                 }
             }
-
-//        for (int i = start; i <= end; i++) {
-//            System.out.print(array[i] + " ");
-//        }
-//        System.out.println();
+            
         }
 
     }
