@@ -18,8 +18,24 @@ public class Sort {
 
     }
 
-    public static void mergeSort(int[] array) {
 
+    public static void bubbleSortStrings(String[] array) {
+        boolean executat = false;
+        do {
+            executat = false;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i].compareTo(array[i + 1]) > 0) {
+                    String temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+                    executat = true;
+                }
+            }
+        } while (executat);
+
+    }
+
+    public static void mergeSort(int[] array) {
 
         mergeSortRecursive(array, 0, array.length - 1);
 
@@ -94,7 +110,7 @@ public class Sort {
         quickSortRecursive(array, 0, array.length - 1);
     }
 
-    public static void quickSortRecursive(int[] array, int start, int end) {
+    private static void quickSortRecursive(int[] array, int start, int end) {
 
         if (start < end) {
             int pivotIndex = partition(array, start, end);
@@ -103,7 +119,7 @@ public class Sort {
         }
     }
 
-    public static int partition(int[] array, int start, int end) {
+    private static int partition(int[] array, int start, int end) {
 
         int pivot = array[end];
         int i = start - 1;
@@ -118,6 +134,39 @@ public class Sort {
 
         }
         int temp = array[i+1];
+        array[i + 1] = array[end];
+        array[end] = temp;
+
+        return i + 1;
+    }
+ public static void quickSort(String[] array) {
+        quickSortRecursive(array, 0, array.length - 1);
+    }
+
+    private static void quickSortRecursive(String[] array, int start, int end) {
+
+        if (start < end) {
+            int pivotIndex = partition(array, start, end);
+            quickSortRecursive(array, start, pivotIndex-1);
+            quickSortRecursive(array, pivotIndex + 1, end);
+        }
+    }
+
+    private static int partition(String[] array, int start, int end) {
+
+        String pivot = array[end];
+        int i = start - 1;
+
+        for (int j = start; j <= end -1; j++) {
+            if (array[j].compareTo(pivot) <= 0) {
+                i++;
+                String temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+
+        }
+        String temp = array[i+1];
         array[i + 1] = array[end];
         array[end] = temp;
 

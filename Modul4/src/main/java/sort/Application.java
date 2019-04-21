@@ -1,16 +1,32 @@
 package sort;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Application {
 
     public static void main(String[] args) {
 
-        int[] myArray = {2, 4, 3};
+        int[] myArray = {20, 40, 30};
         int[] myArray2 = {6, 5, 3, 1, 8, 7, 2, 4};
 
-        Sort.quickSort(myArray2);
-        printArray(myArray2);
+        String[] myNames = {"Alexandru", "Tudor","Iana", "Razvan", "Diana"};
+        Sort.bubbleSortStrings(myNames);
+        printArrayString(myNames);
+        Sort.quickSort(myNames);
+        printArrayString(myNames);
+
+
+        //int[] generated1000 = generateRandomArray(1000);
+        int[] generated10000 = generateRandomArray(10000);
+
+
+//        compareSortingAlgorithms();
+
+
+//        Sort.quickSort(myArray);
+//        printArray(myArray);
 
 //        Sort.insertionSort(myArray2);
 //        printArray(myArray2);
@@ -28,7 +44,47 @@ public class Application {
 
     }
 
+    private static void compareSortingAlgorithms() {
+
+        int[] generated10000 = generateRandomArray(10000);
+        int[] copy = generateCopy(generated10000);
+
+
+        LocalDateTime before = LocalDateTime.now();
+        System.out.println(before);
+        Sort.bubbleSort(generated10000);
+        LocalDateTime after = LocalDateTime.now();
+        System.out.println(after);
+        long durata = Duration.between(before, after).toMillis();
+        System.out.println(durata);
+
+        LocalDateTime before2 = LocalDateTime.now();
+        System.out.println(before2);
+        Sort.quickSort(copy);
+        LocalDateTime after2 = LocalDateTime.now();
+        System.out.println(after2);
+        long durata2 = Duration.between(before2, after2).toMillis();
+        System.out.println(durata2);
+    }
+
+    public static int[] generateCopy(int[] array) {
+
+        int[] copy = new int[array.length];
+        for (int i = 0; i < copy.length; i++) {
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
     public static void printArray(int[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void printArrayString(String[] array) {
 
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
