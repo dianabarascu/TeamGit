@@ -9,8 +9,14 @@ public class Application {
         int[] myArray = {2, 4, 3};
         int[] myArray2 = {6, 5, 3, 1, 8, 7, 2, 4};
 
-        Sort.mergeSort(myArray2);
+        Sort.quickSort(myArray2);
         printArray(myArray2);
+
+//        Sort.insertionSort(myArray2);
+//        printArray(myArray2);
+
+//        Sort.mergeSort(myArray2);
+//        printArray(myArray2);
 
 //        Sort.bubbleSort(myArray);
 //        Sort.bubbleSort(myArray2);
